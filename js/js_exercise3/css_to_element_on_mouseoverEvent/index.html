@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test addClassOnMouseOver Function</title>
+    <style>
+      /* Define the styles for the "active" class */
+      .active {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Add a button with an ID of "button" -->
+    <button id="button">Hover Me!</button>
+
+    <!-- Include your JavaScript code below the HTML content -->
+    <script>
+      function addClassOnMouseOver(elementID, className) {
+        const element = document.getElementById(elementID);
+        element.addEventListener("mouseover", () => {
+          element.classList.add(className);
+        });
+      }
+
+      // Test case
+      // Add the "active" class to the "button" element on mouseover
+      addClassOnMouseOver("button", "active");
+    </script>
+  </body>
+</html>
